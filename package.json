@@ -1,0 +1,40 @@
+{
+    "name": "easyslip-client",
+    "version": "0.0.1",
+    "description": "Client library for EasySlip",
+    "main": "dist/index.js",
+    "types": "dist/index.d.js",
+    "scripts": {
+        "build": "rimraf dist && tsc",
+        "test:mocha": "mocha -r ts-node/register 'test/**/*.ts'",
+        "prettier": "prettier --write src"
+    },
+    "keywords": [
+        "easyslip",
+        "slip",
+        "bank",
+        "thai"
+    ],
+    "author": "M4h45amu7x",
+    "license": "GLP-3.0",
+    "repository": "github:M4h45amu7x/easyslip-client-javascript",
+    "files": [
+        "dist/**/*"
+    ],
+    "homepage": "https://developer.easyslip.com",
+    "dependencies": {
+        "axios": "^1.5.1"
+    },
+    "devDependencies": {
+        "@trivago/prettier-plugin-sort-imports": "^4.2.0",
+        "@types/chai": "^4.3.7",
+        "@types/mocha": "^10.0.2",
+        "@types/node": "^20.8.4",
+        "chai": "^4.3.10",
+        "mocha": "^10.2.0",
+        "prettier": "2.8.8",
+        "rimraf": "^5.0.5",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.2.2"
+    }
+}
