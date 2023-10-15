@@ -24,6 +24,7 @@ interface SuccessResponse {
     data: {
         transRef: string
         date: string
+        countryCode: string
         amount: {
             amount: number
             local: {
