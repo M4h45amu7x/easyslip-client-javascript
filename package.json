@@ -1,6 +1,6 @@
 {
     "name": "easyslip-client",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "Client library for EasySlip",
     "main": "dist/index.js",
     "types": "dist/index.d.js",
@@ -28,9 +28,9 @@
     },
     "devDependencies": {
         "@trivago/prettier-plugin-sort-imports": "^4.2.0",
-        "@types/chai": "^4.3.7",
-        "@types/mocha": "^10.0.2",
-        "@types/node": "^20.8.4",
+        "@types/chai": "^4.3.9",
+        "@types/mocha": "^10.0.3",
+        "@types/node": "^20.8.7",
         "chai": "^4.3.10",
         "mocha": "^10.2.0",
         "prettier": "2.8.8",
