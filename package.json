@@ -1,6 +1,6 @@
 {
     "name": "easyslip-client",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "Client library for EasySlip",
     "main": "dist/index.js",
     "types": "dist/index.d.js",

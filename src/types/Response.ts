@@ -22,6 +22,7 @@ interface Bank {
 interface SuccessResponse {
     status: number
     data: {
+        payload: string
         transRef: string
         date: string
         countryCode: string
@@ -52,6 +53,8 @@ interface ErrorResponse {
     status: number
     message:
         | 'invalid_payload'
+        | 'invalid_image'
+        | 'image_size_too_large'
         | 'unauthorized'
         | 'access_denied'
         | 'account_not_verified'
@@ -59,6 +62,7 @@ interface ErrorResponse {
         | 'application_deactivated'
         | 'quota_exceeded'
         | 'slip_not_found'
+        | 'qrcode_not_found'
         | 'method_not_allowed'
         | 'too_many_requests'
         | 'server_error'
