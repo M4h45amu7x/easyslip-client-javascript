@@ -66,6 +66,7 @@ interface ErrorResponse {
         | 'method_not_allowed'
         | 'too_many_requests'
         | 'server_error'
+        | 'api_server_error'
 }
 
 export { SuccessResponse, ErrorResponse }
