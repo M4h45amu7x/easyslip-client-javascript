@@ -19,7 +19,7 @@ interface Bank {
     short?: string
 }
 
-interface SuccessResponse {
+interface VerifyResponse {
     status: number
     data: {
         payload: string
@@ -49,6 +49,16 @@ interface SuccessResponse {
     }
 }
 
+interface MeResponse {
+    status: number
+    data: {
+        application: string
+        usedQuota: number
+        maxQuota: number
+        remainingQuota: number
+    }
+}
+
 interface ErrorResponse {
     status: number
     message:
@@ -64,9 +74,9 @@ interface ErrorResponse {
         | 'slip_not_found'
         | 'qrcode_not_found'
         | 'method_not_allowed'
-        | 'too_many_requests'
         | 'server_error'
         | 'api_server_error'
+    payload?: string
 }
 
-export { SuccessResponse, ErrorResponse }
+export { VerifyResponse, MeResponse, ErrorResponse }

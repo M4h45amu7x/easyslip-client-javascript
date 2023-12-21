@@ -23,3 +23,14 @@ describe('Verify By Image', () => {
         })
     })
 })
+
+describe('Get Application Information', () => {
+    it('Should success', async () => {
+        const slip = new EasySlip('TEST')
+        const data = await slip.me()
+
+        expect(data).to.contains({
+            status: 200,
+        })
+    })
+})
