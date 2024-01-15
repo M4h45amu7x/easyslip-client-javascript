@@ -19,7 +19,7 @@ class EasySlip {
      */
     constructor(key: string) {
         this.key = key
-        this.endpoint = 'https://developer.easyslip.com/api/v1/verify'
+        this.endpoint = 'https://developer.easyslip.com/api/v1'
     }
 
     /**
@@ -31,7 +31,7 @@ class EasySlip {
      */
     public async verifyByPayload(payload: string): Promise<VerifyResponse> {
         try {
-            const { data } = await axios.get<VerifyResponse>(this.endpoint, {
+            const { data } = await axios.get<VerifyResponse>(`${this.endpoint}/verify`, {
                 params: {
                     payload,
                 },
@@ -66,7 +66,7 @@ class EasySlip {
             const formData = new FormData()
             formData.append('file', fs.createReadStream(imagePath))
 
-            const { data } = await axios.post<VerifyResponse>(this.endpoint, formData, {
+            const { data } = await axios.post<VerifyResponse>(`${this.endpoint}/verify`, formData, {
                 headers: {
                     Authorization: `Bearer ${this.key}`,
                 },
@@ -94,7 +94,7 @@ class EasySlip {
      */
     public async me(): Promise<MeResponse> {
         try {
-            const { data } = await axios.get<MeResponse>(this.endpoint, {
+            const { data } = await axios.get<MeResponse>(`${this.endpoint}/me`, {
                 headers: {
                     Authorization: `Bearer ${this.key}`,
                 },
